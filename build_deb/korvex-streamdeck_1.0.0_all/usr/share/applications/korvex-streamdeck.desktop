@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=KORVEX Stream Deck
+GenericName=Audio Mixer
+Comment=Virtual audio mixer for streaming on PipeWire/PulseAudio
+Exec=korvex-streamdeck
+Icon=korvex-streamdeck
+Terminal=false
+Categories=Audio;AudioVideo;Mixer;
+Keywords=audio;mixer;streaming;pipewire;pulseaudio;
+StartupNotify=true
+StartupWMClass=KORVEX Stream Deck

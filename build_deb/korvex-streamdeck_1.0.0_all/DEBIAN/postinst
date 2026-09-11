@@ -1,0 +1,25 @@
+#!/bin/bash
+set -e
+
+if command -v gtk-update-icon-cache >/dev/null 2>&1; then
+    gtk-update-icon-cache -q -t -f /usr/share/icons/hicolor 2>/dev/null || true
+fi
+
+if command -v update-desktop-database >/dev/null 2>&1; then
+    update-desktop-database -q /usr/share/applications 2>/dev/null || true
+fi
+
+# Instalar pulsectl si no está
+if ! python3 -c "import pulsectl" 2>/dev/null; then
+    echo "KORVEX: instalando dependencia 'pulsectl' vía pip..."
+    pip3 install --break-system-packages 'pulsectl>=23.5.0,<25.0.0' 2>/dev/null || \
+    pip3 install --user 'pulsectl>=23.5.0,<25.0.0' 2>/dev/null || \
+    echo "KORVEX: AVISO — instala manualmente con: pip3 install --user pulsectl"
+fi
+
+echo ""
+echo "  ✅ KORVEX Stream Deck instalado."
+echo "  Búscalo en el menú como 'KORVEX Stream Deck' o ejecuta: korvex-streamdeck"
+echo ""
+
+exit 0

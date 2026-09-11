@@ -1,0 +1,26 @@
+Package: korvex-streamdeck
+Version: 1.0.0
+Section: sound
+Priority: optional
+Architecture: all
+Depends: python3 (>= 3.10),
+         python3-pyqt6,
+         pulseaudio-utils
+Recommends: python3-pulsectl
+Suggests: wireplumber
+Maintainer: KORVEX <tu@email.com>
+Homepage: https://github.com/TU_USUARIO/KORVEX-Stream-Deck
+Description: Virtual audio mixer for streaming on Linux
+ KORVEX Stream Deck is a modern PyQt6 audio mixer built on top of
+ PipeWire/PulseAudio. It creates virtual sinks per channel, allows
+ assigning applications to channels, provides independent volume
+ control and mute per channel, and routes the master output to any
+ physical device.
+ .
+ Features:
+  - Virtual channels (System, Gaming, Music, ...)
+  - App-to-channel assignment with persistence
+  - Per-channel volume and mute
+  - Real-time peak meters
+  - Autostart at login
+  - Modern Qt6-based UI
